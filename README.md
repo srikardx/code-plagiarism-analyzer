@@ -1,27 +1,40 @@
 # Code Plagiarism Analyzer
 
-A system that detects code plagiarism in programming assignments using token-based analysis and similarity comparison techniques.
+A powerful tool to automatically detect plagiarism in programming assignments using token analysis and similarity comparison.
 
 ## 🔍 Problem Statement
-Plagiarism in programming assignments is difficult to detect manually, especially when variable names or formatting are changed. This project aims to automatically identify similarity between code files.
+Manually detecting code plagiarism is time-consuming and error-prone, especially when students rename variables or change formatting.
 
 ## 💡 Solution
-The system tokenizes source code, removes comments and formatting differences, and calculates similarity using set-based comparison logic to produce a plagiarism score.
+This system tokenizes source code, normalizes it, and uses similarity metrics to flag potential plagiarism cases.
 
 ## ✨ Features
-- Token-based code comparison
-- Language-independent logic
-- Percentage similarity score
-- Simple and lightweight design
-- Useful for colleges and instructors
+- Token-based analysis (ignores variable names & formatting)
+- Supports multiple programming languages
+- Percentage-based similarity score
+- Simple CLI interface
+- Great for educators and teaching assistants
 
 ## ⚙️ How It Works
-1. Reads source code files
-2. Removes comments and extra whitespace
-3. Tokenizes identifiers and keywords
-4. Computes similarity using Jaccard similarity
-5. Flags high-plagiarism cases
+1. Load student code files
+2. Remove comments and whitespace
+3. Tokenize code structure
+4. Calculate Jaccard / Cosine similarity
+5. Generate detailed reports
 
 ## 🚀 How to Run
 ```bash
+git clone https://github.com/srikardx/code-plagiarism-analyzer.git
+cd code-plagiarism-analyzer
+pip install -r requirements.txt
 python app.py
+```
+
+## 📊 Example Output
+```
+Similarity between file1.py and file2.py: 87% → HIGH PLAGIARISM RISK
+```
+
+---
+
+Made with ❤️ by [Srikar Reddy](https://github.com/srikardx)
